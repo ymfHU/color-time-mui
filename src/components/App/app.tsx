@@ -14,13 +14,14 @@ export const ColorModeContext = createContext({ toggleColorMode: () => { } });
 function App() {
   const [isOpen, setIsOpen] = useState(false);
 
-  // Set the color mode depend on operating system settings or light if its not defined
+  /* This is a way to set the color mode based on the operating system settings. */
   const [mode, setMode] = useState<'light' | 'dark'>(window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? 'dark' : 'light');
 
-  // Get the theme depend on color mode
+  /* Using the `useTheme` hook to get the theme object. */
   const theme = useTheme({ mode });
 
-  // Prepare colorMode to ColorModeContext
+  /* This is a memoization technique. It means that the value of `colorMode` is only calculated once
+  and then stored in the memory. */
   const colorMode = useMemo(
     () => ({
       // The dark mode switch would invoke this method

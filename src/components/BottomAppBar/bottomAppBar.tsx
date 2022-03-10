@@ -32,6 +32,10 @@ const BottomAppBar = (props:BottomAppBarProps) => {
   const theme = useTheme();
   const { enqueueSnackbar } = useSnackbar();
 
+  /**
+   * It resets the color list to the default.
+   * @param {any} e - the event object
+   */
   const handleReset = (e: any) => {
     e.preventDefault();
     dispatch(

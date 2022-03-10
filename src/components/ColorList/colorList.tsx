@@ -13,6 +13,7 @@ const ColorList = () => {
     const colorList = useAppSelector(
         (state) => state.colorListStore.value
     );
+    
     return (
         <Paper square sx={{ mb: '100px' }}>
             <List sx={{ mb: 2, pt: 0 }}>

@@ -62,8 +62,16 @@ const DialogWindow = (props: DialogProps) => {
   } = props;
 
   const theme = useTheme();
+  
+  /* This is a React hook that returns a boolean value. It is used to determine if the dialog should be
+  full screen or not. */
   const fullScreen = useMediaQuery(theme.breakpoints.down('sm'));
 
+  /**
+   * Given an animation, return the CSS class for the button
+   * @param {String} animation - The type of animation to use.
+   * @returns The string 'rounded'
+   */
   const getButtonAnimation = (animation: String):string => {
     return animation ? 'rounded ' + animation : 'rounded';
   };

@@ -3,6 +3,7 @@ import {
 } from '@reduxjs/toolkit';
 import { ColorListSlice, ColorListDefaults, ColorListEntity } from '../types/colorList';
 
+/* This is a way to define a default value for a slice. */
 const initialState: ColorListSlice = {
   value: ColorListDefaults
 };
@@ -18,6 +19,7 @@ interface AddAction {
   payload: ColorListEntity;
 }
 
+/* A function that returns a slice. */
 const colorListSlice = createSlice({
   name: 'colorListStore',
   initialState,

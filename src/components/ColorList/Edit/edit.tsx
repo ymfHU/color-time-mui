@@ -15,6 +15,10 @@ const Edit = (props: EditProps) => {
   const dispatch = useAppDispatch();
   const { enqueueSnackbar } = useSnackbar();
 
+  /**
+   * It adds a color point to the database.
+   * @param e - React.ChangeEvent<HTMLInputElement>
+   */
   const handleOk = (e: React.ChangeEvent<HTMLInputElement>): void => {
     e.preventDefault();
     dispatch(
@@ -31,6 +35,11 @@ const Edit = (props: EditProps) => {
     setIsOpen(false);
   };
 
+  /**
+   * It takes an event as an argument, and it prevents the default action of the event from happening
+   * and close the Edit modal
+   * @param e - React.ChangeEvent<HTMLInputElement>
+   */
   const handleClose = (e: React.ChangeEvent<HTMLInputElement>): void => {
     e.preventDefault();
     setIsOpen(false);
