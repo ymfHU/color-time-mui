@@ -16,7 +16,7 @@ const Edit = (props: EditProps) => {
   const { enqueueSnackbar } = useSnackbar();
 
   /**
-   * It adds a color point to the database.
+   * It adds a color point to the store.
    * @param e - React.ChangeEvent<HTMLInputElement>
    */
   const handleOk = (e: React.ChangeEvent<HTMLInputElement>): void => {
